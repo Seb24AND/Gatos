@@ -9,7 +9,7 @@ import Banner5 from '../../assets/images/GatoIMG/GatoBanner5.jpeg';
 import Banner6 from '../../assets/images/GatoIMG/GatoBanner6.jpg';
 
 const imagenes = [
-  { src: Banner1, texto: "Salud 24/7" },
+  { src: Banner1, texto: "Atención 24/7" },
   { src: Banner2, texto: "Juguetes Variados" },
   { src: Banner3, texto: "Accesorios para Gatos" },
   { src: Banner4, texto: "Vacunas" },

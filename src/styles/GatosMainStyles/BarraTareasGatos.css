@@ -67,6 +67,17 @@ margin-top: 5px;
 z-index: 1000;
 box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 min-width: 180px;
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px);
+transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 1s;
+}
+
+.dropdown:hover .dropdown-menu {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+transition-delay: 0s;
 }
 
 .dropdown-menu li {

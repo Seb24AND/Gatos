@@ -36,8 +36,7 @@ const BarraGatoTareas = () => {
           {showServicios && (
             <ul className="dropdown-menu">
               <li><a href="#!">Baño</a></li>
-              <li><a href="#!">Vacunas</a></li>
-              <li><a href="#!">Control Veterinario</a></li>
+              <li><a href="#!">Vacunas y Control Veterinacio</a></li>
             </ul>
           )}
         </li>

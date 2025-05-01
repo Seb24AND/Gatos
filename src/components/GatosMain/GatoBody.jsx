@@ -3,7 +3,28 @@ import "../../styles/GatosMainStyles/GatoBody.css";
 
 import Banner1 from '../../assets/images/GatoIMG/BannerAlimentosGato.png';
 import Banner2 from '../../assets/images/GatoIMG/BannerJuguetesGatos.jpg';
-import Banner3 from '../../assets/images/GatoIMG/BannerAccesoriosGatos.jpg';
+import Banner3 from '../../assets/images/GatoIMG/BannerAccesoriosGatos.png';
+// Alimentos
+import Alimentos1 from '../../assets/images/GatoIMG/Alimentos1.jpg';
+import Alimentos2 from '../../assets/images/GatoIMG/Alimentos2.jpg';
+import Alimentos3 from '../../assets/images/GatoIMG/Alimentos3.jpg';
+import Alimentos4 from '../../assets/images/GatoIMG/Alimentos4.jpg';
+import Alimentos5 from '../../assets/images/GatoIMG/Alimentos5.jpg';
+import Alimentos6 from '../../assets/images/GatoIMG/Alimentos6.jpg';
+// Juguetes
+import Juguete1 from '../../assets/images/GatoIMG/Juguetes1.jpg';
+import Juguete2 from '../../assets/images/GatoIMG/Juguetes2.jpg';
+import Juguete3 from '../../assets/images/GatoIMG/Juguetes3.jpg';
+import Juguete4 from '../../assets/images/GatoIMG/Juguetes4.jpg';
+import Juguete5 from '../../assets/images/GatoIMG/Juguetes5.jpg';
+import Juguete6 from '../../assets/images/GatoIMG/Juguetes6.jpg';
+// Accesorios
+import Accesorio1 from '../../assets/images/GatoIMG/Accesorios1.png';
+import Accesorio2 from '../../assets/images/GatoIMG/Accesorios2.jpg';
+import Accesorio3 from '../../assets/images/GatoIMG/Accesorios3.jpg';
+import Accesorio4 from '../../assets/images/GatoIMG/Accesorios4.jpg';
+import Accesorio5 from '../../assets/images/GatoIMG/Accesorios5.jpg';
+import Accesorio6 from '../../assets/images/GatoIMG/Accesorios6.jpg';
 
 const Producto = ({ imagen, nombre, precio }) => (
   <div className="producto">
@@ -11,35 +32,58 @@ const Producto = ({ imagen, nombre, precio }) => (
     <div className="info">
       <h3>{nombre}</h3>
       <p><strong>{precio}</strong></p>
+      <button> Agregar al Carrito </button>
     </div>
   </div>
-);
+)
 
 const GatoBody = () => {
   return (
     <section id="categoria">
     {/*Alimentos*/}
       <img src={Banner1} alt="Banner Alimentos" className="banner-categoria" />
+      <h2>Los Más Vendidos</h2>
+      <hr className="linea-destacada" />
       <div className="fila-productos">
-        <Producto imagen="../Imagenes/alimento1.png" nombre="Comida Premium" precio="S/ 50.00" />
-        <Producto imagen="../Imagenes/alimento2.png" nombre="Snack Saludable" precio="S/ 15.00" />
-        <Producto imagen="../Imagenes/alimento2.png" nombre="Snack Saludable" precio="S/ 15.00" />
-        <Producto imagen="../Imagenes/alimento2.png" nombre="Snack Saludable" precio="S/ 15.00" />
-        <Producto imagen="../Imagenes/alimento2.png" nombre="Snack Saludable" precio="S/ 15.00" />
-        <Producto imagen="../Imagenes/alimento2.png" nombre="Snack Saludable" precio="S/ 15.00" />
-        <a href="/accesorios-gato" className="mostrar-mas">
+        <Producto imagen={Alimentos1} nombre="RicoCat 1kg" precio="S/ 11.00" />
+        <Producto imagen={Alimentos2} nombre="Friskies 1.5 kg" precio="S/ 15.00" />
+        <Producto imagen={Alimentos3} nombre="Snack Saludable" precio="S/ 15.00" />
+        <Producto imagen={Alimentos4} nombre="Snack Saludable" precio="S/ 15.00" />
+        <Producto imagen={Alimentos5} nombre="Snack Saludable" precio="S/ 15.00" />
+        <Producto imagen={Alimentos6} nombre="Snack Saludable" precio="S/ 15.00" />
+        <a href="/Alimentos-gato" className="mostrar-mas">
         Mostrar más... <span className="flecha">➜</span>   
         </a>
       </div>
     {/*Juguetes*/}
       <img src={Banner2} alt="Banner Juguetes" className="banner-categoria" />
+      <h2>Los Más Vendidos</h2>
+      <hr className="linea-destacada" />
       <div className="fila-productos">
-        <Producto imagen="../Imagenes/juguete1.png" nombre="Ratón de Peluche" precio="S/ 10.00" />
+        <Producto imagen={Juguete1} nombre="Ratón de Peluche" precio="S/ 10.00" />
+        <Producto imagen={Juguete2} nombre="Ratón de Peluche" precio="S/ 10.00" />
+        <Producto imagen={Juguete3} nombre="Ratón de Peluche" precio="S/ 10.00" />
+        <Producto imagen={Juguete4} nombre="Ratón de Peluche" precio="S/ 10.00" />
+        <Producto imagen={Juguete5} nombre="Ratón de Peluche" precio="S/ 10.00" />
+        <Producto imagen={Juguete6} nombre="Ratón de Peluche" precio="S/ 10.00" />
+        <a href="/Juguetes-gato" className="mostrar-mas">
+        Mostrar más... <span className="flecha">➜</span>  
+        </a>
       </div>
     {/*Accesorios*/}
       <img src={Banner3} alt="Banner Accesorios" className="banner-categoria" />
+      <h2>Los Más Vendidos</h2>
+      <hr className="linea-destacada" />
       <div className="fila-productos">
-        <Producto imagen="../Imagenes/collar.png" nombre="Collar Antipulgas" precio="S/ 25.00" />
+        <Producto imagen={Accesorio1} nombre="Collar Antipulgas" precio="S/ 25.00" />
+        <Producto imagen={Accesorio2} nombre="Collar Antipulgas" precio="S/ 25.00" />
+        <Producto imagen={Accesorio3} nombre="Collar Antipulgas" precio="S/ 25.00" />
+        <Producto imagen={Accesorio4} nombre="Collar Antipulgas" precio="S/ 25.00" />
+        <Producto imagen={Accesorio5} nombre="Collar Antipulgas" precio="S/ 25.00" />
+        <Producto imagen={Accesorio6} nombre="Collar Antipulgas" precio="S/ 25.00" />
+        <a href="/accesorios-gato" className="mostrar-mas">
+        Mostrar más... <span className="flecha">➜</span>
+        </a>
       </div>
     </section>
   );
