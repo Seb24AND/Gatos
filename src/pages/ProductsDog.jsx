@@ -1,6 +1,6 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState, useEffect } from "react";
-import "../styles/ProductsDog.css";
+import styles from "../styles/DogMainStyles/ProductsDog.module.css";
 
 /*Alimento*/
 import alimento1 from "../assets/images/img-productsDog/alimento-1.jpg";
@@ -44,7 +44,7 @@ function ProductsDog() {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  /*Lógica para Whrapper*/
+  /*Lista de productos por categoria*/
   const productosArray = [
     /*Alimento*/
     {
@@ -231,9 +231,8 @@ function ProductsDog() {
     },
   ];
 
-  /*Prueba, si no sirve lo elimino*/
-  const [activeCategory, setActiveCategory] = useState("all"); // Categoría activa
-  const [filteredProducts, setFilteredProducts] = useState(productosArray); // Productos filtrados
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [filteredProducts, setFilteredProducts] = useState(productosArray);
 
   const filterProducts = (categoryId) => {
     setActiveCategory(categoryId);
@@ -248,65 +247,70 @@ function ProductsDog() {
       setFilteredProducts(filtered);
     }
   };
-  /* */
 
   return (
-    <div className="Principal">
+    <div className={styles.Principal}>
       {/*Mi carrusel*/}
-      <div className="carrusel">
+      <div className={styles.carrusel}>
         <img
           src={images[currentImageIndex]}
           alt={`Banner ${currentImageIndex + 1}`}
-          className="carrusel-img"
+          className={styles.carruselImg}
         />
       </div>
 
       {/*Mis categorias*/}
-      <div className="mercadito">
-        <aside>
+      <div className={styles.mercadito}>
+        <aside className={styles.aside}>
           <header>
-            <h1 className="logo">Perros</h1>
+            <h1 className={styles.logo}>Perros</h1>
           </header>
           <nav>
-            <ul className="menu">
-              <li>
+            <ul className={styles.menu}>
+              <li className={styles.menuLi}>
                 <button
-                  className={`boton-menu boton-categoria ${
-                    activeCategory === "all" ? "active" : ""
+                  className={`${styles.botonMenu} ${
+                    activeCategory === "all" ? styles.botonMenuActive : ""
                   }`}
                   onClick={() => filterProducts("all")}
                 >
-                  <i className="bi bi-bag-dash"></i> Todos los productos
+                  <i className={`${styles.botonMenuIcon} bi bi-bag-dash`}></i>{" "}
+                  Todos los productos
                 </button>
               </li>
-              <li>
+              <li className={styles.menuLi}>
                 <button
-                  className={`boton-menu boton-categoria ${
-                    activeCategory === "alimento" ? "active" : ""
+                  className={`${styles.botonMenu} ${
+                    activeCategory === "alimento" ? styles.botonMenuActive : ""
                   }`}
                   onClick={() => filterProducts("alimento")}
                 >
-                  <i className="bi bi-bag"></i> Alimento
+                  <i className={`${styles.botonMenuIcon} bi bi-bag`}></i>{" "}
+                  Alimento
                 </button>
               </li>
-              <li>
+              <li className={styles.menuLi}>
                 <button
-                  className={`boton-menu boton-categoria ${
-                    activeCategory === "accesorios" ? "active" : ""
+                  className={`${styles.botonMenu} ${
+                    activeCategory === "accesorios"
+                      ? styles.botonMenuActive
+                      : ""
                   }`}
                   onClick={() => filterProducts("accesorios")}
                 >
-                  <i className="bi bi-bag"></i> Accesorios
+                  <i className={`${styles.botonMenuIcon} bi bi-bag`}></i>{" "}
+                  Accesorios
                 </button>
               </li>
-              <li>
+              <li className={styles.menuLi}>
                 <button
-                  className={`boton-menu boton-categoria ${
-                    activeCategory === "juguetes" ? "active" : ""
+                  className={`${styles.botonMenu} ${
+                    activeCategory === "juguetes" ? styles.botonMenuActive : ""
                   }`}
                   onClick={() => filterProducts("juguetes")}
                 >
-                  <i className="bi bi-bag"></i> Juguetes
+                  <i className={`${styles.botonMenuIcon} bi bi-bag`}></i>{" "}
+                  Juguetes
                 </button>
               </li>
             </ul>
@@ -314,25 +318,25 @@ function ProductsDog() {
         </aside>
 
         <main>
-          <h2 className="titulo-principal">
+          <h2 className={styles.tituloPrincipal}>
             {activeCategory === "all"
               ? "Todos los productos"
               : productosArray.find((p) => p.categoria.id === activeCategory)
                   ?.categoria.nombre || "Productos"}
           </h2>
 
-          <div className="contenedor-productos">
+          <div className={styles.contenedorProductos}>
             {filteredProducts.map((product) => (
-              <div key={product.id} className="producto">
+              <div key={product.id} className={styles.producto}>
                 <img
-                  className="producto-imagen"
+                  className={styles.productoImagen}
                   src={product.imagen}
                   alt={product.titulo}
                 />
-                <div className="producto-detalles">
-                  <h3 className="producto-titulo">{product.titulo}</h3>
-                  <p className="producto-precio">S/ {product.precio}</p>
-                  <button className="producto-agregar">Agregar</button>
+                <div className={styles.productoDetalles}>
+                  <h3 className={styles.productoTitulo}>{product.titulo}</h3>
+                  <p className={styles.productoPrecio}>S/ {product.precio}</p>
+                  <button className={styles.productoAgregar}>Agregar</button>
                 </div>
               </div>
             ))}
