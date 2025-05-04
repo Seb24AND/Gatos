@@ -47,10 +47,10 @@ const GatoBody = () => {
       <div className="fila-productos">
         <Producto imagen={Alimentos1} nombre="RicoCat 1kg" precio="S/ 11.00" />
         <Producto imagen={Alimentos2} nombre="Friskies 1.5 kg" precio="S/ 15.00" />
-        <Producto imagen={Alimentos3} nombre="Snack Saludable" precio="S/ 15.00" />
-        <Producto imagen={Alimentos4} nombre="Snack Saludable" precio="S/ 15.00" />
-        <Producto imagen={Alimentos5} nombre="Snack Saludable" precio="S/ 15.00" />
-        <Producto imagen={Alimentos6} nombre="Snack Saludable" precio="S/ 15.00" />
+        <Producto imagen={Alimentos3} nombre="RicoCat Lata" precio="S/ 5.50" />
+        <Producto imagen={Alimentos4} nombre="Felix Travesuras" precio="S/ 11.00" />
+        <Producto imagen={Alimentos5} nombre="Barritas Cremi" precio="S/ 10.90" />
+        <Producto imagen={Alimentos6} nombre="Cereal NATH 1kg" precio="S/ 20.00" />
         <a href="/Alimentos-gato" className="mostrar-mas">
         Mostrar más... <span className="flecha">➜</span>   
         </a>
@@ -60,12 +60,12 @@ const GatoBody = () => {
       <h2>Los Más Vendidos</h2>
       <hr className="linea-destacada" />
       <div className="fila-productos">
-        <Producto imagen={Juguete1} nombre="Ratón de Peluche" precio="S/ 10.00" />
-        <Producto imagen={Juguete2} nombre="Ratón de Peluche" precio="S/ 10.00" />
-        <Producto imagen={Juguete3} nombre="Ratón de Peluche" precio="S/ 10.00" />
-        <Producto imagen={Juguete4} nombre="Ratón de Peluche" precio="S/ 10.00" />
-        <Producto imagen={Juguete5} nombre="Ratón de Peluche" precio="S/ 10.00" />
-        <Producto imagen={Juguete6} nombre="Ratón de Peluche" precio="S/ 10.00" />
+        <Producto imagen={Juguete1} nombre="Ratón Dinamico" precio="S/ 10.00" />
+        <Producto imagen={Juguete2} nombre="Mini-Laberinto" precio="S/ 21.00" />
+        <Producto imagen={Juguete3} nombre="Ratón de Peluche 2x1" precio="S/ 15.00" />
+        <Producto imagen={Juguete4} nombre="Laser Inteligente" precio="S/ 16.90" />
+        <Producto imagen={Juguete5} nombre="Dispensador de Comida" precio="S/ 10.50" />
+        <Producto imagen={Juguete6} nombre="Pajaro de Peluche" precio="S/ 7.50" />
         <a href="/Juguetes-gato" className="mostrar-mas">
         Mostrar más... <span className="flecha">➜</span>  
         </a>
@@ -75,12 +75,12 @@ const GatoBody = () => {
       <h2>Los Más Vendidos</h2>
       <hr className="linea-destacada" />
       <div className="fila-productos">
-        <Producto imagen={Accesorio1} nombre="Collar Antipulgas" precio="S/ 25.00" />
-        <Producto imagen={Accesorio2} nombre="Collar Antipulgas" precio="S/ 25.00" />
-        <Producto imagen={Accesorio3} nombre="Collar Antipulgas" precio="S/ 25.00" />
-        <Producto imagen={Accesorio4} nombre="Collar Antipulgas" precio="S/ 25.00" />
-        <Producto imagen={Accesorio5} nombre="Collar Antipulgas" precio="S/ 25.00" />
-        <Producto imagen={Accesorio6} nombre="Collar Antipulgas" precio="S/ 25.00" />
+        <Producto imagen={Accesorio1} nombre="Casa Colgante" precio="S/ 55.00" />
+        <Producto imagen={Accesorio2} nombre="Arenero kit Completo" precio="S/ 45.00" />
+        <Producto imagen={Accesorio3} nombre="Lentes de Sol" precio="S/ 10.00" />
+        <Producto imagen={Accesorio4} nombre="Arenero Basico" precio="S/ 25.00" />
+        <Producto imagen={Accesorio5} nombre="Auto-Refill Agua" precio="S/ 15.00" />
+        <Producto imagen={Accesorio6} nombre="Wall-Scartcher" precio="S/ 20.00" />
         <a href="/accesorios-gato" className="mostrar-mas">
         Mostrar más... <span className="flecha">➜</span>
         </a>
